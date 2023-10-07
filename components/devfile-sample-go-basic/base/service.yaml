@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-go-basic
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-go-basic
+    app.kubernetes.io/part-of: load-app-ec3063fc-224d-4bdf-b955-2409c3f9c27f
+  name: devfile-sample-go-basic
+spec:
+  ports:
+  - name: "8081"
+    port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: devfile-sample-go-basic
+status:
+  loadBalancer: {}
